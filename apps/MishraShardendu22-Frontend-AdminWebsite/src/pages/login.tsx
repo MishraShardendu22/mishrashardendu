@@ -47,20 +47,22 @@ export default function LoginPage() {
       <div className="space-y-8 max-w-md w-full">
         <div className="text-center space-y-4">
           <div className="flex justify-center mb-4">
-            <div className="p-4 rounded-2xl bg-linear-to-br from-secondary/20 to-primary/20 border-2 border-secondary/30">
-              <Shield className="h-12 w-12 text-secondary" />
+            <div className="p-4 rounded-2xl bg-primary/10 border border-primary/25">
+              <Shield className="h-12 w-12 text-primary" />
             </div>
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-secondary via-primary to-accent bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-[#f3ebdd] via-[#d9a55b] to-[#e6b56c] bg-clip-text text-transparent">
             Admin Access Portal
           </h1>
-          <p className="text-base text-foreground/70">Secure authentication required</p>
+          <p className="text-base text-muted-foreground">Secure authentication required</p>
         </div>
 
-        <Card className="border-2 border-border/50 hover:border-secondary/50 transition-all duration-500 hover:shadow-2xl">
+        <Card className="border border-border bg-card/90 backdrop-blur-md hover:border-primary/40 transition-all duration-300 shadow-xl">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-secondary">Sign In</CardTitle>
-            <CardDescription>Enter your credentials</CardDescription>
+            <CardTitle className="text-2xl font-bold text-foreground">Sign In</CardTitle>
+            <CardDescription className="text-muted-foreground">
+              Enter your credentials
+            </CardDescription>
           </CardHeader>
           <CardContent>
             {error && (
