@@ -51,24 +51,24 @@
       case "warning":
         return "bg-yellow-50 dark:bg-yellow-900/20 border-yellow-500/50 text-yellow-800 dark:text-yellow-200";
       case "info":
-        return "bg-blue-50 dark:bg-blue-900/20 border-blue-500/50 text-blue-800 dark:text-blue-200";
+        return "bg-amber-50 dark:bg-[#1e1a16] border-[#d9a55b]/50 text-amber-900 dark:text-[#f3ebdd]";
       default:
-        return "bg-gray-50 dark:bg-gray-900/20 border-gray-500/50 text-gray-800 dark:text-gray-200";
+        return "bg-[#161311] border-[#2f2923] text-[#f3ebdd]";
     }
   };
 
   const getIconColor = (type: Toast["type"]) => {
     switch (type) {
       case "success":
-        return "text-green-600 dark:text-green-400";
+        return "text-[#4caf7d]";
       case "error":
-        return "text-red-600 dark:text-red-400";
+        return "text-[#e06060]";
       case "warning":
-        return "text-yellow-600 dark:text-yellow-400";
+        return "text-[#e8893f]";
       case "info":
-        return "text-blue-600 dark:text-blue-400";
+        return "text-[#d9a55b]";
       default:
-        return "text-gray-600 dark:text-gray-400";
+        return "text-[#8e8374]";
     }
   };
 </script>

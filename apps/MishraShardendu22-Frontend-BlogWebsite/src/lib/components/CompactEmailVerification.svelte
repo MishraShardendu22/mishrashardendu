@@ -129,7 +129,7 @@
           bind:value={otp}
           oninput={handleOTPInput}
           maxlength="6"
-          class="h-10 text-base flex-1 min-w-0 font-mono text-center tracking-widest bg-white dark:bg-slate-900 border-2 border-amber-300 dark:border-amber-700 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 rounded-md px-2 py-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+          class="h-10 text-base flex-1 min-w-0 font-mono text-center tracking-widest bg-white dark:bg-[#161311] border-2 border-amber-300 dark:border-[#2f2923] text-foreground focus:border-[#d9a55b] focus:ring-2 focus:ring-[#d9a55b]/20 rounded-md px-2 py-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
           disabled={isSubmitting}
           autocomplete="off"
         />
@@ -137,7 +137,7 @@
           size="sm"
           onclick={handleVerifyOTP}
           disabled={isSubmitting || otp.length !== 6}
-          className="h-10 px-3 shrink-0 bg-linear-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold shadow-md disabled:opacity-50"
+          className="h-10 px-3 shrink-0 bg-[#d9a55b] hover:bg-[#e6b56c] text-[#0e0c0a] font-semibold shadow-md disabled:opacity-50"
           title="Verify"
           type="button"
         >

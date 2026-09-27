@@ -84,7 +84,7 @@ export default function ProfilePage() {
 
               <div className="space-y-2">
                 <Label className="flex items-center gap-2 font-semibold text-sm text-foreground/80">
-                  <Shield className="w-4 h-4 text-secondary" />
+                  <Shield className="w-4 h-4 text-primary" />
                   User ID
                 </Label>
                 <Input
@@ -158,9 +158,9 @@ export default function ProfilePage() {
         </Card>
 
         {/* Statistics Card */}
-        <Card className="bg-linear-to-br from-card/90 to-card/70 backdrop-blur-md border-2 border-border/50 hover:border-secondary/50 rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-secondary/10 transition-all duration-300">
+        <Card className="bg-linear-to-br from-card/90 to-card/70 backdrop-blur-md border-2 border-border/50 hover:border-primary/50 rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
           <CardHeader>
-            <CardTitle className="text-xl font-bold text-secondary">Portfolio Stats</CardTitle>
+            <CardTitle className="text-xl font-bold text-foreground">Portfolio Stats</CardTitle>
             <CardDescription className="text-foreground/60">Your content overview</CardDescription>
           </CardHeader>
           <CardContent>
@@ -177,14 +177,14 @@ export default function ProfilePage() {
                 </span>
               </div>
 
-              <div className="flex items-center justify-between p-4 rounded-xl bg-linear-to-r from-secondary/10 to-secondary/5 border border-secondary/20 hover:border-secondary/40 transition-colors">
+              <div className="flex items-center justify-between p-4 rounded-xl bg-linear-to-r from-primary/10 to-primary/5 border border-primary/20 hover:border-primary/40 transition-colors">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-secondary/20">
-                    <Briefcase className="w-5 h-5 text-secondary" />
+                  <div className="p-2 rounded-lg bg-primary/20">
+                    <Briefcase className="w-5 h-5 text-primary" />
                   </div>
                   <span className="font-medium text-foreground">Experiences</span>
                 </div>
-                <span className="text-2xl font-bold text-secondary">
+                <span className="text-2xl font-bold text-foreground">
                   {profile?.experiences?.length || 0}
                 </span>
               </div>

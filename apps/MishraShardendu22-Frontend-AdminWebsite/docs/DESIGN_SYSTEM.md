@@ -9,20 +9,25 @@ This document details the unified visual system and design tokens for the federa
 
 ## 1. Design Token System
 
-### 1.1 Neutral Palette (10-Step Zinc Scale)
-*   **Background (Global Canvas)**: `zinc-950` (`#09090b`)
-*   **Surface Primary (Cards, Headers, Sidebars)**: `zinc-900` (`#18181b`)
-*   **Surface Elevated (Inputs, Secondary Areas)**: `zinc-800` (`#27272a`)
-*   **Borders (Subtle)**: `zinc-800` (`#27272a`)
-*   **Borders (Elevated/Hover)**: `zinc-700` (`#3f3f46`)
-*   **Text (Primary)**: `zinc-50` (`#fafafa`)
-*   **Text (Secondary/Muted)**: `zinc-400` (`#a1a1aa`)
+### 1.1 Planetary Warm Dark Palette
+*   **Background (Global Void Canvas)**: `#0e0c0a` (warm planetary near-black)
+*   **Surface Primary (Cards, Headers, Sidebars)**: `#161311` (obsidian warm surface)
+*   **Surface Elevated (Inputs, Secondary Areas)**: `#1e1a16` (deep warm fill)
+*   **Surface Popover / Hover**: `#27221c`
+*   **Borders (Subtle / Hairline)**: `#2f2923`
+*   **Borders (Elevated / Strong)**: `#413930`
+*   **Text (Primary / Starlight Cream)**: `#f3ebdd`
+*   **Text (Secondary)**: `#b9ae9d`
+*   **Text (Muted)**: `#8e8374`
 
-### 1.2 Locked Accent Color (Violet)
-*   **Accent Primary**: `#7c3aed` (violet-600)
-*   **Accent Hover/Light**: `#8b5cf6` (violet-500)
-*   **Accent Active/Dark**: `#6d28d9` (violet-700)
-*   **Accent Muted/Glow**: `rgba(124, 58, 237, 0.15)`
+### 1.2 Observatory Starlight Amber Accent
+*   **Accent Primary**: `#d9a55b` (starlight amber)
+*   **Accent Hover/Light**: `#e6b56c`
+*   **Accent Active/Dark**: `#c59146`
+*   **Accent Muted/Glow**: `rgba(217, 165, 91, 0.15)`
+*   **Status Emerald**: `#4caf7d`
+*   **Status Terracotta/Orange**: `#e8893f`
+*   **Status Danger**: `#e06060`
 
 ### 1.3 Typography Pairings
 *   **Headings/Titles**: `Space Grotesk` (Geometric, sharp sans-serif)

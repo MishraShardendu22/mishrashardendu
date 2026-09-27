@@ -96,10 +96,10 @@ export default function ExperiencesPage() {
             {currentData.map((exp) => (
               <Card
                 key={exp.inline?.id || exp.inline.id}
-                className="group relative overflow-hidden border hover:border-secondary/50 transition-all duration-200 hover:shadow-lg bg-card rounded-xl h-[300px] w-full flex flex-col"
+                className="group relative overflow-hidden border hover:border-primary/50 transition-all duration-200 hover:shadow-lg bg-card rounded-xl h-[300px] w-full flex flex-col"
               >
                 <CardHeader className="p-4 pb-2">
-                  <CardTitle className="text-base font-semibold text-secondary line-clamp-2">
+                  <CardTitle className="text-base font-semibold text-foreground line-clamp-2">
                     {exp.experience_time_line?.[0]?.position ?? 'Position'}
                   </CardTitle>
                   <CardDescription className="text-sm text-muted-foreground">

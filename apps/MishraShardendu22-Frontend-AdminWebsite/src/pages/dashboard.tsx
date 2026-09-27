@@ -108,7 +108,7 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
 
-        <Card className="border-2 border-border/50 hover:border-blue-500/50 transition-all">
+        <Card className="border-2 border-border/50 hover:border-primary/50 transition-all">
           <CardContent className="p-6 lg:p-8 flex flex-col items-center">
             <div className="text-4xl font-bold text-foreground mb-2">Live</div>
             <div className="text-base font-medium text-foreground/80">Portfolio Status</div>
@@ -217,8 +217,8 @@ export default function DashboardPage() {
           {/* Recent Experiences */}
           <div className="rounded-2xl border-2 border-border bg-card/80 shadow-xl p-6 lg:p-8">
             <div className="flex items-center gap-3 mb-6">
-              <GraduationCap className="h-6 w-6 text-secondary" />
-              <h3 className="text-2xl font-bold text-secondary">Recent Experiences</h3>
+              <GraduationCap className="h-6 w-6 text-primary" />
+              <h3 className="text-2xl font-bold text-foreground">Recent Experiences</h3>
             </div>
 
             <div className="space-y-4">

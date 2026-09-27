@@ -104,24 +104,24 @@ export default function SkillsPage() {
   }
 
   return (
-    <div class="space-y-8">
-      <header class="text-center space-y-6">
-        <h1 class="text-2xl md:text-3xl font-heading font-extrabold bg-linear-to-r from-blue-500 via-teal-500 to-green-500 bg-clip-text text-transparent leading-tight">
+    <div className="space-y-8">
+      <header className="text-center space-y-6">
+        <h1 className="text-2xl md:text-3xl font-heading font-extrabold bg-linear-to-r from-[#f3ebdd] via-[#d9a55b] to-[#e6b56c] bg-clip-text text-transparent leading-tight">
           Skills - Manage your technical skills and competencies
         </h1>
-        <p class="text-sm text-muted-foreground">Total Skills: {skills.length}</p>
+        <p className="text-sm text-muted-foreground">Total Skills: {skills.length}</p>
         <Alert>
-          <AlertDescription class="text-sm text-muted-foreground text-center">
+          <AlertDescription className="text-sm text-muted-foreground text-center">
             💡 Skills are automatically extracted from your projects. Add skills here to include
             them in your profile.
           </AlertDescription>
         </Alert>
       </header>
 
-      <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4 md:gap-0 border-b pb-4">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 md:gap-0 border-b pb-4">
         <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
           <DialogTrigger>
-            <Button class="bg-teal-600 hover:bg-teal-700 text-white font-semibold">
+            <Button className="bg-[#d9a55b] hover:bg-[#e6b56c] text-[#0e0c0a] font-semibold">
               Add Skills
             </Button>
           </DialogTrigger>
@@ -132,7 +132,7 @@ export default function SkillsPage() {
                 Enter skills separated by commas (e.g., React, TypeScript, Node.js)
               </DialogDescription>
             </DialogHeader>
-            <form onSubmit={handleAddSkills} class="space-y-4">
+            <form onSubmit={handleAddSkills} className="space-y-4">
               <div>
                 <Label htmlFor="skills">Skills</Label>
                 <Input
@@ -143,12 +143,16 @@ export default function SkillsPage() {
                   required
                 />
               </div>
-              <div class="flex justify-end gap-2">
+              <div className="flex justify-end gap-2">
                 <Button type="button" variant="outline" onClick={() => setIsAddDialogOpen(false)}>
                   Cancel
                 </Button>
-                <Button type="submit" disabled={submitting} class="bg-teal-600 hover:bg-teal-700">
-                  {submitting && <Loader2 class="w-4 h-4 mr-2 animate-spin" />}
+                <Button
+                  type="submit"
+                  disabled={submitting}
+                  className="bg-[#d9a55b] hover:bg-[#e6b56c] text-[#0e0c0a] font-semibold"
+                >
+                  {submitting && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
                   {submitting ? 'Adding...' : 'Add Skills'}
                 </Button>
               </div>
@@ -164,44 +168,46 @@ export default function SkillsPage() {
       )}
 
       {skills.length === 0 ? (
-        <div class="flex flex-col items-center justify-center py-20 space-y-6 bg-gray-50 dark:bg-gray-900/50 rounded-xl border shadow-lg">
-          <h3 class="text-3xl font-semibold">No skills yet</h3>
-          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-md text-center">
+        <div className="flex flex-col items-center justify-center py-20 space-y-6 bg-card rounded-xl border shadow-lg">
+          <h3 className="text-3xl font-semibold">No skills yet</h3>
+          <p className="text-lg text-muted-foreground max-w-md text-center">
             Get started by adding your first skill.
           </p>
           <Button
             onClick={() => setIsAddDialogOpen(true)}
-            class="inline-flex px-6 py-3 rounded-full bg-linear-to-r from-teal-500 to-green-500 text-white shadow-lg hover:from-teal-600 hover:to-green-600 font-semibold"
+            className="inline-flex px-6 py-3 rounded-full bg-[#d9a55b] hover:bg-[#e6b56c] text-[#0e0c0a] shadow-lg font-semibold"
           >
             Add Skill
           </Button>
         </div>
       ) : (
         <>
-          <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 2xl:grid-cols-10 gap-2 min-h-80">
+          <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 2xl:grid-cols-10 gap-2 min-h-80">
             {paginatedSkills.map((skill) => (
               <div
                 key={skill}
-                class="group relative bg-secondary/10 hover:bg-secondary/20 p-2 rounded border border-border hover:border-secondary/50 transition-all duration-150 h-12.5 flex items-center justify-center"
+                className="group relative bg-[#1e1a16] hover:bg-[#27221c] p-2 rounded border border-border hover:border-primary/50 transition-all duration-150 h-12.5 flex items-center justify-center"
               >
-                <p class="text-center font-medium text-xs text-foreground line-clamp-2">{skill}</p>
+                <p className="text-center font-medium text-xs text-foreground line-clamp-2">
+                  {skill}
+                </p>
               </div>
             ))}
           </div>
 
           {totalPages > 1 && (
-            <div class="flex justify-center items-center gap-4 mt-4 py-3 bg-background/90 backdrop-blur-sm rounded-lg border">
+            <div className="flex justify-center items-center gap-4 mt-4 py-3 bg-background/90 backdrop-blur-sm rounded-lg border">
               <Button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 0))}
                 variant="outline"
                 disabled={currentPage === 0}
-                class="flex items-center gap-1 h-8 text-sm"
+                className="flex items-center gap-1 h-8 text-sm"
               >
-                <ChevronLeft class="w-4 h-4" />
+                <ChevronLeft className="w-4 h-4" />
                 Prev
               </Button>
 
-              <span class="text-sm font-medium min-w-35 text-center">
+              <span className="text-sm font-medium min-w-35 text-center">
                 Page {currentPage + 1} of {totalPages} ({totalSkills})
               </span>
 
@@ -209,10 +215,10 @@ export default function SkillsPage() {
                 onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages - 1))}
                 variant="outline"
                 disabled={currentPage === totalPages - 1}
-                class="flex items-center gap-1 h-8 text-sm"
+                className="flex items-center gap-1 h-8 text-sm"
               >
                 Next
-                <ChevronRight class="w-4 h-4" />
+                <ChevronRight className="w-4 h-4" />
               </Button>
             </div>
           )}

@@ -146,8 +146,8 @@
             <p class="stat-number">{totalComments}</p>
           </div>
           <div class="stat-icon">
-            <div class="stat-icon-inner from-blue-500 to-blue-700">
-              <MessageCircle class="w-5 h-5 text-white" />
+            <div class="stat-icon-inner from-[#d9a55b] to-[#e6b56c]">
+              <MessageCircle class="w-5 h-5 text-[#0e0c0a]" />
             </div>
           </div>
         </div>
