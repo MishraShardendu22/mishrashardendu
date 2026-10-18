@@ -70,14 +70,16 @@ const SortableCard = ({ item }: SortableCardProps) => {
     <div
       ref={setNodeRef}
       style={style}
-      className={`group relative transition-all duration-200 ${
+      className={`group relative transition-all duration-200 h-full flex flex-col ${
         isDragging ? 'opacity-50 shadow-lg scale-[0.98]' : ''
       }`}
     >
       <Card
-        className={`border bg-card ${isDragging ? '' : 'hover:shadow-md hover:border-primary/30'}`}
+        className={`h-full min-h-[76px] border bg-card flex flex-col justify-center ${
+          isDragging ? '' : 'hover:shadow-md hover:border-primary/30'
+        }`}
       >
-        <CardHeader className="p-4">
+        <CardHeader className="p-4 h-full flex flex-col justify-center">
           <div className="flex items-start gap-3">
             <div
               className="mt-0.5 cursor-grab active:cursor-grabbing p-1 rounded hover:bg-muted/50 transition-colors"
@@ -315,14 +317,16 @@ export default function BlogReorderPage() {
               </SortableContext>
               <DragOverlay>
                 {activeItem ? (
-                  <Card className="shadow-xl border-primary/50 bg-card">
-                    <CardHeader className="p-4">
+                  <Card className="shadow-xl border-primary/50 bg-card min-h-[76px] flex flex-col justify-center">
+                    <CardHeader className="p-4 h-full flex flex-col justify-center">
                       <div className="flex items-start gap-3">
                         <GripVertical className="h-4 w-4 text-muted-foreground mt-0.5" />
-                        <CardTitle className="text-base font-medium text-foreground line-clamp-2 flex-1">
-                          {activeItem.title}
-                        </CardTitle>
-                        <Badge variant="secondary" className="font-mono text-xs h-6 px-2">
+                        <div className="flex-1 min-w-0">
+                          <CardTitle className="text-base font-medium text-foreground line-clamp-2 leading-snug">
+                            {activeItem.title}
+                          </CardTitle>
+                        </div>
+                        <Badge variant="secondary" className="shrink-0 font-mono text-xs h-6 px-2">
                           #{activeItem.order}
                         </Badge>
                       </div>
