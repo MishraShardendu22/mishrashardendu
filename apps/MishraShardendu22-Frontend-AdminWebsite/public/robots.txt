@@ -1,6 +1,9 @@
 # Robots.txt for MishraShardendu22 Admin Dashboard
-# Disallow all crawlers - internal application only
+# Allow Ahrefs Site Audit for monitoring
+User-agent: AhrefsSiteAudit
+Allow: /
 
+# Disallow all other crawlers - internal application only
 User-agent: *
 Disallow: /
 
