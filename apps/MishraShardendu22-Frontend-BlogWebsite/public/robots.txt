@@ -64,4 +64,4 @@ Allow: /
 Sitemap: https://blogs.mishrashardendu22.is-a.dev/sitemap.xml
 
 # Host
-Host: https://blogs.mishrashardendu22.is-a.dev
+Host: blogs.mishrashardendu22.is-a.dev
