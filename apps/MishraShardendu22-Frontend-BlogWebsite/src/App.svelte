@@ -36,19 +36,7 @@
     // Set up navigation event listeners
     const handleLocationChange = () => {
       currentPath = window.location.pathname;
-      
-      if (currentPath === '/' || currentPath === '') {
-        window.history.replaceState(null, '', '/read');
-        currentPath = '/read';
-      }
     };
-
-    // Check initial path
-    const checkPath = window.location.pathname;
-    if (checkPath === '/' || checkPath === '') {
-      window.history.replaceState(null, '', '/read');
-      currentPath = '/read';
-    }
 
     window.addEventListener("popstate", handleLocationChange);
     
@@ -66,11 +54,7 @@
   });
 
   const normalizedPath = $derived(() => {
-    let path = currentPath;
-    if (!path || path === '/') {
-      path = '/read';
-    }
-    return path;
+    return currentPath || '/';
   });
 
   const requiresAuth = $derived(() => {
@@ -143,7 +127,7 @@
         updateSEO({
           title: 'Blogs By Shardendu Mishra | Tech Articles & Programming Insights',
           description: 'Explore in-depth technical articles covering web development, software engineering, programming best practices, system design, and modern tech stack insights. Written by Shardendu Mishra, a passionate software engineer and IIIT Dharwad student.',
-          url: `${baseUrl}/read`,
+          url: currentPath === '/read' ? `${baseUrl}/read` : baseUrl,
           keywords: 'technical articles, programming blog, web development, software engineering, coding tutorials, tech insights',
         });
         break;

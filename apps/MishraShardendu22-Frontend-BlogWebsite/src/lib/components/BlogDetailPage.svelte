@@ -59,10 +59,12 @@
       if (response.success && response.data) {
         blog = response.data;
         const result = marked(blog.content || "");
+        const cleanHtml = (html: string) =>
+          html.replace(/<h1(\s|>)/gi, '<h2$1').replace(/<\/h1>/gi, '</h2>');
         if (result instanceof Promise) {
-          result.then(html => { renderedContent = html; });
+          result.then(html => { renderedContent = cleanHtml(html); });
         } else {
-          renderedContent = result;
+          renderedContent = cleanHtml(result);
         }
         
         const baseUrl = 'https://blogs.mishrashardendu22.is-a.dev';

@@ -60,10 +60,15 @@
   );
 </script>
 
-<button
-  type="button"
-  class="group flex flex-col bg-card/80 backdrop-blur-md rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 cursor-pointer border border-border hover:border-primary/30 w-full text-left active:scale-[0.98]"
-  onclick={() => onReadMore?.(blog.id.toString())}
+<a
+  href={`/read/${blog.id}`}
+  class="group flex flex-col bg-card/80 backdrop-blur-md rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 cursor-pointer border border-border hover:border-primary/30 w-full text-left active:scale-[0.98] no-underline block"
+  onclick={(e) => {
+    if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+      e.preventDefault();
+      onReadMore?.(blog.id.toString());
+    }
+  }}
 >
   <!-- Card Image Header -->
   <div class="relative w-full aspect-[16/9] overflow-hidden bg-muted">
@@ -124,4 +129,4 @@
       </div>
     </div>
   </div>
-</button>
+</a>

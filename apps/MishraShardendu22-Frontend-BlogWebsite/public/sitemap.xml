@@ -11,4 +11,36 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Published Articles -->
+  <url>
+    <loc>https://blogs.mishrashardendu22.is-a.dev/read/24</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://blogs.mishrashardendu22.is-a.dev/read/23</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://blogs.mishrashardendu22.is-a.dev/read/21</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://blogs.mishrashardendu22.is-a.dev/read/18</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://blogs.mishrashardendu22.is-a.dev/read/17</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
