@@ -1,0 +1,9 @@
+# Shardendu Mishra — Engineering & Tech Blog
+> Technical blog exploring scalable distributed systems, Go, TypeScript, Next.js, and autonomous agent architectures by Shardendu Mishra.
+
+## Main Links
+- [Tech Blog Homepage](https://blogs.mishrashardendu22.is-a.dev)
+- [Read Articles](https://blogs.mishrashardendu22.is-a.dev/read)
+- [Main Developer Portfolio](https://mishrashardendu22.is-a.dev)
+- [GitHub Backup System Dashboard](https://github.mishrashardendu22.is-a.dev)
+- [Sitemap](https://blogs.mishrashardendu22.is-a.dev/sitemap.xml)

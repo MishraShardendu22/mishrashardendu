@@ -1,49 +1,64 @@
 # Robots.txt for Shardendu Mishra's Blog
 # https://blogs.mishrashardendu22.is-a.dev
+# Max SEO & AI Agent reach - all crawlers and AI scrapers fully allowed
 
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /_next/
 
-# Allow social media crawlers for rich previews
-User-agent: facebookexternalhit
+# Explicit AI Agent & Web Scraper permissions
+User-agent: GPTBot
 Allow: /
 
-User-agent: Twitterbot
+User-agent: ChatGPT-User
 Allow: /
 
-User-agent: LinkedInBot
+User-agent: ClaudeBot
 Allow: /
 
-# Search engine specific rules
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-# Rate limit aggressive crawlers
 User-agent: AhrefsBot
-Crawl-delay: 10
+Allow: /
+
+User-agent: AhrefsSiteAudit
+Allow: /
 
 User-agent: SemrushBot
-Crawl-delay: 10
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
+Allow: /
 
 # Sitemaps
 Sitemap: https://blogs.mishrashardendu22.is-a.dev/sitemap.xml

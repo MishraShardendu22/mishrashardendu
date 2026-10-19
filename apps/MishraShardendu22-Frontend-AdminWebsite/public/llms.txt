@@ -1,0 +1,7 @@
+# Shardendu Mishra — Admin Website
+> Administrative portal and portfolio CMS for Shardendu Mishra's online presence.
+
+## Main Links
+- [Admin Website](https://admin.mishrashardendu22.is-a.dev)
+- [Main Developer Portfolio](https://mishrashardendu22.is-a.dev)
+- [Tech Blog](https://blogs.mishrashardendu22.is-a.dev)

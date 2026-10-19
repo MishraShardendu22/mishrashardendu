@@ -1,10 +1,54 @@
 # Robots.txt for MishraShardendu22 Admin Dashboard
-# Allow Ahrefs Site Audit for monitoring
+# Max SEO & AI Agent reach - all crawlers and AI scrapers fully allowed
+
+User-agent: *
+Allow: /
+
+# Explicit AI Agent permissions
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: AhrefsBot
+Allow: /
+
 User-agent: AhrefsSiteAudit
 Allow: /
 
-# Disallow all other crawlers - internal application only
-User-agent: *
-Disallow: /
-
-# No sitemap needed for internal admin application
+User-agent: SemrushBot
+Allow: /
