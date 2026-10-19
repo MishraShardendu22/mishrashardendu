@@ -69,15 +69,23 @@
         
         const baseUrl = 'https://blogs.mishrashardendu22.is-a.dev';
         const blogUrl = `${baseUrl}/read/${blogId}`;
-        const description = truncateDescription(blog.content, 160);
+        const cleanContent = (blog.content || '')
+          .replace(/#+\s+/g, '')
+          .replace(/[*_`\[\]()]/g, '')
+          .replace(/\s+/g, ' ')
+          .trim();
+        const description = truncateDescription(cleanContent, 150);
         const authorName = blog.author?.name || 'Shardendu Mishra';
         const tags = Array.isArray(blog.tags) ? blog.tags : [];
         const keywords = tags.length > 0 
           ? `${tags.join(', ')}, programming, software development, tech article` 
           : 'programming, software development, tech article, coding tutorial';
         
+        const cleanTitle = (blog.title || '').length > 42 ? `${blog.title.slice(0, 40)}...` : (blog.title || '');
+        const pageTitle = `${cleanTitle} | Shardendu's Blog`;
+        
         updateSEO({
-          title: `${blog.title} | Shardendu Mishra Blog`,
+          title: pageTitle,
           description: description,
           url: blogUrl,
           type: 'article',

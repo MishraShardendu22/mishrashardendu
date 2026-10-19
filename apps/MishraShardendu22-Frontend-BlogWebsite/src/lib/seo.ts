@@ -21,7 +21,7 @@ export interface SEOConfig {
 const DEFAULT_SEO: SEOConfig = {
   title: 'Shardendu Mishra — Engineering Notes',
   description:
-    'Explore in-depth technical articles about web development, software engineering, programming best practices, and modern tech stack insights by Shardendu Mishra, a passionate software engineer and IIIT Dharwad student.',
+    'In-depth technical articles on web development, system architecture, programming best practices, and modern cloud stacks by Shardendu Mishra.',
   keywords:
     'Shardendu Mishra blog, technical blog, web development articles, programming tutorials, software engineering, Go programming, React tutorials, TypeScript guides, tech insights, developer blog, coding tips, IIIT Dharwad, full stack development, system design',
   image: CDN_IMAGES.PROFESSIONAL,
@@ -178,7 +178,7 @@ function updateCanonicalLink(url: string): void {
 /**
  * Truncate text for meta descriptions
  */
-export function truncateDescription(text: string, maxLength: number = 160): string {
+export function truncateDescription(text: string, maxLength: number = 150): string {
   if (text.length <= maxLength) return text
   return `${text.substring(0, maxLength - 3).trim()}...`
 }

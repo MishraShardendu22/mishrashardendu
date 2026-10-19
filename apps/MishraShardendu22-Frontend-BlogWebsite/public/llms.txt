@@ -1,9 +1,16 @@
-# Shardendu Mishra — Engineering & Tech Blog
-> Technical blog exploring scalable distributed systems, Go, TypeScript, Next.js, and autonomous agent architectures by Shardendu Mishra.
+# Shardendu Mishra — Engineering Notes & Technical Blog
+> Technical blog featuring deep-dive articles on modern full-stack web development, system architecture, Go backend engineering, reactive Svelte 5 patterns, and database internals.
 
-## Main Links
-- [Tech Blog Homepage](https://blogs.mishrashardendu22.is-a.dev)
-- [Read Articles](https://blogs.mishrashardendu22.is-a.dev/read)
-- [Main Developer Portfolio](https://mishrashardendu22.is-a.dev)
-- [GitHub Backup System Dashboard](https://github.mishrashardendu22.is-a.dev)
-- [Sitemap](https://blogs.mishrashardendu22.is-a.dev/sitemap.xml)
+## Published Articles
+- [Comprehensive Guide to Full-Stack Web Development](https://blogs.mishrashardendu22.is-a.dev/read/24) — Complete architecture roadmap from front-end state to back-end services.
+- [Demystifying Database Indexing: A Complete Guide](https://blogs.mishrashardendu22.is-a.dev/read/23) — B-trees, hash indices, query optimization, and execution plans.
+- [Building Scalable Microservices with Go and Docker](https://blogs.mishrashardendu22.is-a.dev/read/21) — Production containerization, health probes, and Go concurrency patterns.
+- [Mastering React Hooks: From Basics to Custom Hooks](https://blogs.mishrashardendu22.is-a.dev/read/18) — Idempotent state management, memory leaks, and reusable custom hooks.
+- [CSS Grid vs Flexbox: When to Use Which](https://blogs.mishrashardendu22.is-a.dev/read/17) — Modern layout paradigms, responsive container queries, and subgrid.
+
+## Author & Platform Links
+- Author: Shardendu Mishra (Software Engineer)
+- Main Portfolio: https://mishrashardendu22.is-a.dev
+- Systems Lab: https://github.mishrashardendu22.is-a.dev
+- Sitemap: https://blogs.mishrashardendu22.is-a.dev/sitemap.xml
+- Robots: https://blogs.mishrashardendu22.is-a.dev/robots.txt
