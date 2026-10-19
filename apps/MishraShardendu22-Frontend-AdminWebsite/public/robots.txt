@@ -52,3 +52,6 @@ Allow: /
 
 User-agent: SemrushBot
 Allow: /
+
+Sitemap: https://admin.mishrashardendu22.is-a.dev/sitemap.xml
+Host: admin.mishrashardendu22.is-a.dev
