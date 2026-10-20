@@ -8,6 +8,7 @@
     Folder,
     Award,
     Code,
+    Cpu,
     BookOpen,
     Shield,
     Package,
@@ -25,10 +26,11 @@
   ];
 
   const MY_WEBSITES = [
-    { name: "Github Backup Lab", url: "https://github.mishrashardendu22.is-a.dev", icon: Code },
-    { name: "Main", url: "https://mishrashardendu22.is-a.dev", icon: BookOpen },
-    { name: "Admin Portal", url: "https://admin.mishrashardendu22.is-a.dev", icon: Shield },
-    { name: "My UI Library", url: "https://pixel-art-8-bit.mishrashardendu22.is-a.dev", icon: Package },
+    { name: "Frozen UI", url: "https://shardendu.is-a.dev", icon: Package },
+    { name: "Github Backup", url: "https://github.mishrashardendu22.is-a.dev", icon: Code },
+    { name: "Personal Website", url: "https://mishrashardendu22.is-a.dev", icon: BookOpen },
+    { name: "Observatory UI", url: "https://design.mishrashardendu22.is-a.dev", icon: Cpu },
+    { name: "Documentation", url: "https://docs.mishrashardendu22.is-a.dev", icon: Folder },
   ];
 
   const SOCIAL_MEDIA = [
