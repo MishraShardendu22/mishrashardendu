@@ -4,10 +4,13 @@ import { Toaster } from 'react-hot-toast'
 import App from './app'
 import { ThemeProvider } from './hooks/use-theme'
 
+const appElement = document.getElementById('app')!
+appElement.replaceChildren()
+
 render(
   <ThemeProvider>
     <App />
     <Toaster position="top-right" />
   </ThemeProvider>,
-  document.getElementById('app')!
+  appElement
 )
