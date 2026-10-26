@@ -46,6 +46,7 @@ try {
   if (!appElement) {
     throw new Error('App container element not found')
   }
+  appElement.replaceChildren()
   app = mount(App, {
     target: appElement,
   })

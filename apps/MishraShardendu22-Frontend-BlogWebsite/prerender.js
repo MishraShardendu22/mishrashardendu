@@ -126,6 +126,34 @@ async function prerender() {
       `<meta name="twitter:url" content="${blogUrl}" />`
     )
 
+    // 6. Inject Article Pre-Shell inside <div id="app">
+    const articleShell = `
+    <div id="app">
+      <article style="max-width: 800px; margin: 40px auto 60px; padding: 0 20px; font-family: system-ui, sans-serif;">
+        <nav aria-label="Breadcrumbs" style="margin-bottom: 2rem; display: flex; gap: 0.75rem; font-size: 0.95rem;">
+          <a href="/" style="color: #60a5fa; text-decoration: none;">&larr; Back to all publications</a>
+          <span style="color: #52525b;">/</span>
+          <span style="color: #a1a1aa;">Article #${blogId}</span>
+        </nav>
+        <header style="margin-bottom: 2.5rem; border-bottom: 1px solid #27272a; padding-bottom: 1.5rem;">
+          <h1 style="font-size: 2.25rem; font-weight: 700; line-height: 1.25; margin-bottom: 1rem; color: #ffffff;">${blogTitle}</h1>
+          <p style="color: #71717a; font-size: 0.9rem;">By Shardendu Mishra • Published in Technical Engineering Notes</p>
+        </header>
+        <div style="color: #d4d4d8; line-height: 1.8; font-size: 1.05rem; margin-bottom: 3rem;">
+          <p style="margin-bottom: 1.5rem;">${blogSummary}</p>
+        </div>
+        <footer style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #27272a; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <a href="/" style="color: #60a5fa; text-decoration: none;">&larr; Browse All Technical Publications</a>
+          <a href="https://mishrashardendu22.is-a.dev" style="color: #60a5fa; text-decoration: none;">Main Portfolio &rarr;</a>
+        </footer>
+      </article>
+    </div>`
+
+    articleHtml = articleHtml.replace(
+      /<div id="app">[\s\S]*?<\/div>\s*<script/i,
+      `${articleShell}\n    <script`
+    )
+
     // Write to dist/read/:id/index.html
     const targetDir = path.join(distDir, 'read', String(blogId))
     fs.mkdirSync(targetDir, { recursive: true })
