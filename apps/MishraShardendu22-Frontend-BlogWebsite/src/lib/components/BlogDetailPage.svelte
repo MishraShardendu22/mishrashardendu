@@ -7,7 +7,7 @@
   import Badge from "./ui/badge.svelte";
   import Button from "./ui/button.svelte";
   import Avatar from "./ui/avatar.svelte";
-  import { navigateTo } from "../navigation";
+  import { navigateBack } from "../navigation";
   import { Loading, ErrorState } from "./shared";
   import OptimizedImage from "./OptimizedImage.svelte";
   import { validateCommentContent } from "../validation";
@@ -336,7 +336,7 @@
 
 <!-- Mobile back button (fixed) -->
 <div class="lg:hidden fixed top-4 left-4 z-50">
-  <Button variant="ghost" size="icon" onclick={() => history.back()} className="w-10 h-10" aria-label="Go back to previous page">
+  <Button variant="ghost" size="icon" onclick={navigateBack} className="w-10 h-10" aria-label="Go back to previous page">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0L3.586 10l4.707-4.707a1 1 0 011.414 1.414L6.414 10l3.293 3.293a1 1 0 010 1.414z" clip-rule="evenodd"/></svg>
   </Button>
 </div>
@@ -350,7 +350,7 @@
 
 <!-- Desktop back button -->
 <div class="hidden lg:block mb-6">
-  <Button variant="ghost" size="sm" onclick={() => history.back()} className="gap-2" aria-label="Go back to previous page">
+  <Button variant="ghost" size="sm" onclick={navigateBack} className="gap-2" aria-label="Go back to previous page">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0L3.586 10l4.707-4.707a1 1 0 011.414 1.414L6.414 10l3.293 3.293a1 1 0 010 1.414z" clip-rule="evenodd"/></svg>
     Back
   </Button>
